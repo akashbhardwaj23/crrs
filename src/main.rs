@@ -7,14 +7,6 @@ struct Cli {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> { 
-    // let pattern = std::env::args().nth(1).expect("no pattern given");
-    // let path = std::env::args().nth(2).expect("No path Given");
-
-    // let cli = Cli{
-    //     pattern,
-    //     path : std::path::PathBuf::from(path)
-    // };
-
     let cli = Cli::parse();
 
     let content = std::fs::read_to_string(&cli.path).map_err(|_| format!("Error while Reading {}", cli.path.display()))?;
