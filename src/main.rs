@@ -21,6 +21,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     println!("Pattern {:?}, path {:?}", cli.pattern, cli.path);
+     
+    // println!("Path Capacity {:?}", cli.path);
 
     Ok(())
 }
